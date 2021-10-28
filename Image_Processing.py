@@ -15,7 +15,7 @@ def main(path):
     #converting image to gray scale and making contours
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     ret, thresh = cv2.threshold(gray,127,255,1)
-    _,contours,h = cv2.findContours(thresh,1,2)
+    contours,h = cv2.findContours(thresh,1,2)
     #Creating lists
     a = []
     color=''
